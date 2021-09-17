@@ -11,7 +11,7 @@ public class BaseSeleniumTest {
     public WebDriverWait wait;
     public String baseUrl;
     public ApplicationProperties applicationProperties = new ApplicationProperties("properties/common.properties");
-    public static final int DEFAULT_WEBDRIVERWAIT_TIMEOUT = 30;
+    public static final int DEFAULT_WEBDRIVERWAIT_TIMEOUT = 15;
     public TestUtils testUtils;
 
 
