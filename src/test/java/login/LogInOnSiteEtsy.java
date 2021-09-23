@@ -17,12 +17,13 @@ public class LogInOnSiteEtsy extends BaseSeleniumTest {
 
     @Test
     public void startTest() {
-
+        System.out.println(this.signInButton);
         driver.get(baseUrl);
         LOGGER.info("Open Etsy home page");
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(this.applicationProperties.readProperty(signInButton)))).click();
-        Assert.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.id(this.applicationProperties.readProperty(expectedText)))).getText(), "Sign in to continue");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(this.signInButton))).click();
+
 
     }
 
